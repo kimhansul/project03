@@ -1,0 +1,45 @@
+@mixin underlineeffect(){
+    &{
+        background: linear-gradient(transparent 60%,#ffd71e 40%) no-repeat;
+        background-size: 0 100%;
+        transition: background-size .4s;
+    }
+}
+
+@mixin ms($screen-width) {
+    @if $screen-width == 'screen-1' {
+        @media screen and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if $screen-width == 'screen-2' {
+        @media screen and (max-width: 1023px) {
+            @content;
+        }
+    }
+    @if $screen-width == 'screen-3' {
+        @media screen and (max-width: 955px) {
+            @content;
+        }
+    }
+    @if $screen-width == 'screen-4' {
+        @media screen and (max-width: 885px) {
+            @content;
+        }
+    }
+    @if $screen-width == 'screen-5' {
+        @media screen and (max-width: 790px) {
+            @content;
+        }
+    }
+    @if $screen-width == 'screen-6' {
+        @media screen and (max-width: 690px) {
+            @content;
+        }
+    }
+    @if $screen-width == 'screen-7' {
+        @media screen and (max-width: 639px) {
+            @content;
+        }
+    }
+}

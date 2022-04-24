@@ -1,0 +1,195 @@
+.header{
+    width: 100%;
+    background: #fff;
+
+    .type_normal{
+        display: flex;
+        justify-content: space-between;
+    
+        .simple_type{
+            width: 100%;
+            padding: 1em;
+            display: none;
+
+            .hamburger_menu{
+                display: none;
+                width: 42px;
+                height: 3rem;
+    
+                .hamburger_btn{
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background: #fff;
+                    border-radius: 0.159091em;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+    
+                    &::before, &::after{
+                        content: '';
+                        width: 100%;
+                        height: 4px;
+                        background: #fff;
+                        border-radius: 0.159091em;
+                        position: absolute;
+                        left: 0;
+
+                        @include ms('screen-7'){
+                            height: 6px;
+                        }
+                    }
+                    &::before{
+                        top: -15px;
+                    }
+                    &::after{
+                        top: 15px;
+                    }
+
+                    @include ms('screen-7'){
+                        height: 6px;
+                    }
+                }
+    
+                @include ms('screen-1'){
+                    display: block;
+                }
+
+                &.active{
+                    position: fixed;
+                    top: 16px;
+                    z-index: 100;
+                }
+
+                @include ms('screen-7'){
+                    width: 49px;
+                }
+            }
+            .devgames_logo{
+                display: none;
+                width: 13.5rem;
+    
+                svg{
+                    fill: #fff;
+                    margin-top: 0.25rem;
+                }
+    
+                @include ms('screen-1'){
+                    display: block;
+                }
+                @include ms('screen-7'){
+                    width: 150px;
+                }
+            }    
+            @include ms('screen-1'){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @include ms('screen-7'){
+                align-items: normal;
+            }
+        }
+    }
+    @include ms('screen-1'){
+        background: transparent;
+        position: absolute;
+    }
+}
+.header_logo a{
+    display: block;
+    padding: 0.25em 0;
+
+    img{
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    @include ms('screen-1'){
+        display: none;
+    }
+}
+.top_header{
+    display: flex;
+
+    li{
+        line-height: 5em;
+        margin-left: 2.5em;
+
+        a{
+            font-size: 1.5em;
+            position: relative;
+
+            span{
+                position: relative;
+                z-index: 5;
+            }
+
+            @include underlineeffect();
+
+            &:hover{
+                background-size: 100% 100%;
+            }
+        }
+    }
+    @include ms('screen-1'){
+        display: none;
+    }
+}
+.header_fixed{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: -81px;
+    z-index: 99;
+    transition: all .4s;
+    
+    .type_fixed{
+        display: flex;
+        justify-content: space-between;
+
+        .fixedheader_wrap{
+            display: flex;
+        }
+
+        .header_download{
+            display: flex;
+            align-items: center;
+
+            .header_download_btn{
+                display: flex;
+                width: 173px;
+                height: 50px;
+                align-content: center;
+                justify-content: center;
+                letter-spacing: -0.05em;
+                position: relative;
+    
+                .button_light{
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                }
+    
+                .download_icon{
+                    width: 29px;
+                    height: 27px;
+                    margin: 0.25em 0.5em 0 0;
+                }    
+            }
+            
+            @include ms('screen-1'){
+                margin-right: 30px;
+            }
+        }
+    }
+
+    &.active{
+        top: 0;
+    }
+
+    @include ms('screen-1'){
+        background: rgba(25, 29, 36, .95);
+        padding: 1em 0;
+    }
+}

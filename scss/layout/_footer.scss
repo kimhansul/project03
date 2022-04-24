@@ -1,0 +1,125 @@
+.footer{
+    background: #191d24;
+    padding: 2.75rem 0 4.375rem;
+
+    .sns_btn_wrap{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3em;
+
+        .sns_btn_box{
+
+            .sns_btn{
+                display: block;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                margin: 0 10px;
+
+                svg{
+                    width: 100%;
+                    height: 100%;
+
+                    path{
+                        transform: translate(-3px, -3px);
+                        fill: #fff;
+
+                        @include ms('screen-7'){
+                            transform: translate(1px, 1px) scale(0.6);
+                        }
+                    }
+                }
+                &.type_naver{
+                    background: #3AAE38;
+                }
+                &.type_youtube{
+                    background: #C7252D;
+                }
+                &.type_facebook{
+                    background: #3C5C99;
+                }
+                &.type_twitter{
+                    background: #37AEE1;
+                }
+                &.type_instar{
+                    background: url(../../image/sns_bg.png) no-repeat center center /cover;
+                }
+
+                @include ms('screen-7'){
+                    width: 44px;
+                    height: 44px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .policy_wrap{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 13px;
+
+        .policy_btn{
+
+            a{
+                display: block;
+                color: #fff;
+                text-align: center;
+                border: 1px solid #fff;
+                line-height: 1;
+                padding: 0.6875rem 1.875rem;
+                margin: 0 0.625rem;
+
+                &.bold_style{
+                    font-weight: 700;
+                }
+
+                &:hover{
+                    color: #191d24;
+                    background: #fff;
+                }
+
+                @include ms('screen-7'){
+                    margin: 9px 18px;
+                }
+            }
+
+            @include ms('screen-7'){
+                width: 100%;
+            }
+        }
+    }
+
+    .footer_info{
+        color: #fff;
+        text-align: center;
+
+        address{
+            font-style: normal;
+            margin: 6px 0;
+        }
+        p{
+            margin: 3px 0;
+
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .footer_logo_box{
+        margin-top: 23px;
+        text-align: center;
+
+        .footer_logo{
+            width: 224px;
+            font-size: 29px;
+            fill: #fff;
+
+            @include ms('screen-7'){
+                width: 339px;
+            }
+        }
+    }
+}

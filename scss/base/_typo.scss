@@ -1,0 +1,17 @@
+.title{
+    width: max-content;
+    font-size: 2.5em;
+    font-family: 'CookieRunOTF-Bold', sans-serif;
+    margin: 0 auto;
+    position: relative;
+
+    @include underlineeffect();
+
+    &.active{
+        background-size: 100% 100%;
+    }
+}
+
+.top_header li a{
+    font-family: 'CookieRunOTF-Bold', sans-serif;
+}
