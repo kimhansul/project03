@@ -8,14 +8,14 @@
         content: '';
         width: 100%;
         height: 100%;
-        background: url(../../image/main_background.png) no-repeat center center /cover;
+        background: url(../image/main_background.png) no-repeat center center /cover;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
 
         @include ms('screen-7'){
-            background-image: url(../../image/main_background_mobile.jpg);
+            background-image: url(../image/main_background_mobile.jpg);
         }
     }
 
@@ -369,6 +369,10 @@
             z-index: 10;
             top: 0;
             left: 0;
+
+            @include ms('screen-1'){
+                display: none;
+            }
         }
     }
 
@@ -384,6 +388,7 @@
             height: 49px;
             opacity: 0.5;
             font-size: 0;
+            z-index: 20;
 
             svg{
                 width: 100%;
@@ -435,7 +440,7 @@
 .cookie_info_wrap{
     min-height: 800px;
     height: 40.208333333333336vw;
-    background: url(../../image/cookieinfo_background.jpg) no-repeat center center /cover;
+    background: url(../image/cookieinfo_background.jpg) no-repeat center center /cover;
     padding: 0;
 
     .title{
@@ -467,6 +472,6 @@
     }
 
     @include ms('screen-7'){
-        background-image: url(../../image/cookieinfo_background_mobile.jpg);
+        background-image: url(../image/cookieinfo_background_mobile.jpg);
     }
 }

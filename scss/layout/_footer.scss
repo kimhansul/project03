@@ -2,6 +2,15 @@
     background: #191d24;
     padding: 2.75rem 0 4.375rem;
 
+    .inner{
+        text-align: center;
+
+        &>a{
+            display: inline-block;
+            margin-top: 1em;
+        }
+    }
+
     .sns_btn_wrap{
         display: flex;
         justify-content: center;
@@ -42,7 +51,7 @@
                     background: #37AEE1;
                 }
                 &.type_instar{
-                    background: url(../../image/sns_bg.png) no-repeat center center /cover;
+                    background: url(../image/sns_bg.png) no-repeat center center /cover;
                 }
 
                 @include ms('screen-7'){

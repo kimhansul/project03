@@ -1,0 +1,18 @@
+#skip{
+    position: relative;
+
+    a{
+        position: absolute;
+        color: #fff;
+        background: #000;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        top: -200px;
+
+        &:active, &:focus{
+            top: 0;
+            z-index: 99;
+        }
+    }
+}
